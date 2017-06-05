@@ -1,12 +1,15 @@
 const http = require('http');
+const pp = require('./index');
 http.createServer(function (req, res) {
-    res.writeHead(200,{'cont-type':'text/plain'});
+    res.writeHead(200, {'cont-type': 'text/plain'});
 
-    var get_params = url.parse(req.url, true).query;
-    console.log(get_params);
+    req = new pp(req);
+
+    console.log(req.query);
+
 
     res.end('hello parse-params');
 
-}).listen(3000,function () {
+}).listen(3000, function () {
     console.log('listen on port 3000');
 });
