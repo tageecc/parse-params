@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "is-json": "^2.0.1"
+  }
+}

@@ -4,8 +4,8 @@ http.createServer(function (req, res) {
     res.writeHead(200, {'cont-type': 'text/plain'});
 
     req = new pp(req);
-
-    console.log(req.query);
+    console.log('query');
+    console.log(req.post);
 
 
     res.end('hello parse-params');
